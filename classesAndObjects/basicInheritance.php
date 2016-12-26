@@ -6,7 +6,7 @@ Followed by a land animal and a water animal
 Followed by a cheetah and whale
 */
 
-class Animal{
+abstract class Animal{
   private $weight;
   private $color;
   private $size;
@@ -34,6 +34,8 @@ class Animal{
   public function getSize(){
     return $this->size;
   }
+
+  public abstract function intro();
 }
 
 class LandAnimal extends Animal{
@@ -53,6 +55,10 @@ class LandAnimal extends Animal{
   public function getMaxSpeed(){
     return $this->maxSpeed;
   }
+
+  public function intro(){
+    //add intro
+  }
 }
 
 class WaterAnimal extends Animal{
@@ -71,6 +77,10 @@ class WaterAnimal extends Animal{
 
   private function getMaxSpeed(){
     return $this->maxSpeed;
+  }
+
+  public function intro(){
+    //add intro
   }
 }
 
