@@ -1,40 +1,29 @@
 <?php
 
-class Example{
+/*Understanding how isset and unset works
+*/
 
-  private $name;
+//Obviously a false
+var_dump(isset($name));
 
-  private function isNameSet(){
-    if(isset($this->name)){
-      return "Set";
-    }else{
-      return "Not Set";
-    }
-  }
+$name;
 
-  function doTest(){
-    //$name = "Nikhil";
-    print "Is name set : "
-          .$this->isNameSet()
-          ."\n";
+//Now that we have defined the variable
+//isset would still be false
+//as $name is NULL
+//From docs:Determine if a variable is set and is not NULL.
+var_dump(isset($name));
+//var_dump($name);
 
-    print "Is name set : "
-          .$this->isNameSet()
-          ."\n";
+$name = "Nikhil";
 
-    $this->name = "Santa";
-    print "Is name set : "
-          .$this->isNameSet()
-          ."\n";
-    unset($this->name);
+//Now that is has been set
+//this should give us something meaningful
+var_dump(isset($name));
 
-    print "Is name set : "
-          .$this->isNameSet()
-          ."\n";
-  }
-}
+//let us now unset $name
+unset($name);
 
-$example = new Example();
-$example->doTest();
-
+//should be back to sq one
+var_dump(isset($name));
  ?>
