@@ -2,7 +2,7 @@
 
 class Person{
     private $name;
-    
+    public $justToShowInList;
     function  __construct($name){
         $this->name = $name;
     }
@@ -25,6 +25,9 @@ class Person{
 print("Listing all methods available in Person (private methods are not shown) : \n");
 print_r(get_class_methods("Person"));
 print_r(get_class_methods(new Person("Hello Moto")));
+
+print("Listing all properties in Person : ");
+print_r(get_class_vars("Person"));
 
 //Calling a method with variable names
 $nikhil = new Person("Nikhil");

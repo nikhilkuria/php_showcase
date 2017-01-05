@@ -5,3 +5,15 @@ Looking for Classes
 Learning about an Object or Class
     get_class()
     instanceof 
+    
+Learning about methods
+    get_class_methods()
+    is_callable()
+    method_exists()
+    
+Learning about properties
+    get_class_vars()
+    
+Inheritance
+    get_parent_class()
+    is_subclass_of()
