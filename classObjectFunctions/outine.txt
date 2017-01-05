@@ -1,0 +1,7 @@
+Looking for Classes
+    file_exists()
+    class_exists()
+    
+Learning about an Object or Class
+    get_class()
+    instanceof 
