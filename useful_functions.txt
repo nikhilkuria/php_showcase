@@ -1,0 +1,10 @@
+fscanf
+fgets
+explode
+
+intval
+
+array_walk
+array_map
+array_filter
+array_reduce
