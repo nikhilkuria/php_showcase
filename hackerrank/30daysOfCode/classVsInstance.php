@@ -17,11 +17,11 @@ class Person{
     
     public function amIOld(){
         if($this->age < 13){
-            print("You are young..");
+            print("You are young.");
         }else if($this->age >= 13 && $this->age < 18){
-            print("You are a teenager..");
+            print("You are a teenager.");
         }else{
-            print("You are old..");
+            print("You are old.");
         }
         print("\n");
     }

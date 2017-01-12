@@ -1,5 +1,5 @@
 <?php
-
+//http://stackoverflow.com/questions/41582568/access-external-variable-from-a-function/41582971?noredirect=1#comment70370875_41582971
 $handle = fopen("php://stdin","r");
 
 $positiveCount = -1;
