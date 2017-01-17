@@ -33,10 +33,18 @@ function swap(&$array, &$swapCache, $numOfRota){
 $swapCache[0] = 0;
 $swapCache[1] = $array[0];
 
+//crany on space constraints
+//must hack here
+if($arrayLength/2 == $numOfRota){
+    print(implode(" ", array_merge(array_slice($array, -$numOfRota), array_slice($array, 0, $numOfRota))));
+}else{
+    
 for($index = 0;$index< count($array);$index++){
         swap($array, $swapCache,$numOfRota);
 }
 
 print(implode(" ",$array));
+}
+
 
 ?>
