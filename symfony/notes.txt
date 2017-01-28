@@ -1,0 +1,8 @@
+bin/console cache:clear
+
+bin/console debug:container - list the modules present in the container
+bin/console debug:container <search term>- list the modules present in the container with serachi
+
+
+composer update
+composer validate
