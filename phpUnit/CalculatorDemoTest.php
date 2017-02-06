@@ -6,10 +6,9 @@
  * Date: 03/02/17
  * Time: 5:39 AM
  */
+use PHPUnit\Framework\TestCase;
 
-require 'CalculatorDemo.php';
-
-class CalculatorDemoTest extends PHPUnit_Framework_TestCase
+class CalculatorDemoTest extends TestCase
 {
     private $calculator;
 
