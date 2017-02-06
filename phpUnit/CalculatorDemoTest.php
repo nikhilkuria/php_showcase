@@ -39,4 +39,23 @@ class CalculatorDemoTest extends TestCase
         $result = $this->calculator->add(-1, -1);
         $this->assertEquals(-2, $result);
     }
+
+    /**
+     * @dataProvider additionProvider
+     */
+    public function testAddWithProvider($a, $b, $expected)
+    {
+        print("Asserting {$a} + {$b} = {$expected}");
+        $this->assertEquals($expected, $a + $b);
+    }
+
+    public function additionProvider()
+    {
+                return [
+          'adding zeros'  => [0, 0, 0],
+          'zero plus one' => [0, 1, 1],
+          'one plus zero' => [1, 0, 1],
+          'one plus one'  => [1, 1, 3]
+      ];
+    }
 }
