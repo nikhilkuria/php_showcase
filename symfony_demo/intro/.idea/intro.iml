@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHP" type="php">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/composer" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/doctrine/instantiator" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/monolog/monolog" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/myclabs/deep-copy" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/phpdocumentor/reflection-common" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/phpdocumentor/reflection-docblock" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/phpdocumentor/type-resolver" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/phpspec/prophecy" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/phpunit/php-code-coverage" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/phpunit/php-file-iterator" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/phpunit/php-text-template" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/phpunit/php-timer" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/phpunit/php-token-stream" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/phpunit/phpunit" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/phpunit/phpunit-mock-objects" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/psr/log" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/sebastian/code-unit-reverse-lookup" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/sebastian/comparator" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/sebastian/diff" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/sebastian/environment" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/sebastian/exporter" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/sebastian/global-state" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/sebastian/object-enumerator" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/sebastian/recursion-context" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/sebastian/resource-operations" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/sebastian/version" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/webmozart/assert" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/composer" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/doctrine/instantiator" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/monolog/monolog" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/myclabs/deep-copy" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/phpdocumentor/reflection-common" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/phpdocumentor/reflection-docblock" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/phpdocumentor/type-resolver" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/phpspec/prophecy" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/phpunit/php-code-coverage" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/phpunit/php-file-iterator" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/phpunit/php-text-template" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/phpunit/php-timer" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/phpunit/php-token-stream" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/phpunit/phpunit" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/phpunit/phpunit-mock-objects" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/psr/log" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/sebastian/code-unit-reverse-lookup" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/sebastian/comparator" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/sebastian/diff" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/sebastian/environment" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/sebastian/exporter" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/sebastian/global-state" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/sebastian/object-enumerator" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/sebastian/recursion-context" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/sebastian/resource-operations" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/sebastian/version" />
+          <root url="file://$MODULE_DIR$/../../../nikeandphp/vendor/webmozart/assert" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="PHP Runtime" type="php">
+        <CLASSES>
+          <root url="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard" />
+        </CLASSES>
+        <SOURCES>
+          <root url="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="PHARS">
+        <CLASSES>
+          <root url="phar://$MODULE_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
+          <root url="phar://$MODULE_DIR$/../../../nikeandphp/vendor/phpunit/phpunit/tests/_files/phpunit-example-extension/tools/phpunit.d/phpunit-example-extension-1.0.0.phar/" />
+        </CLASSES>
+        <SOURCES>
+          <root url="phar://$MODULE_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
+          <root url="phar://$MODULE_DIR$/../../../nikeandphp/vendor/phpunit/phpunit/tests/_files/phpunit-example-extension/tools/phpunit.d/phpunit-example-extension-1.0.0.phar/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>

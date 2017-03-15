@@ -1,8 +1,16 @@
+--keywords--
+route - an uri that is configured in the controller
+------------
+
+symfony new <project name> - creates a new project with the name
+
+bin/console - lists all the possible commands
+
 bin/console cache:clear
 
 bin/console debug:container - list the modules present in the container
 bin/console debug:container <search term>- list the modules present in the container with serachi
-
+bin/console debug:router - lists the available routes
 
 composer update
 composer validate
@@ -13,6 +21,7 @@ composer validate
      - security
      - routing
      - log files
+     - settings file in config
 /src
      - holds all the bundles
      - controllers
@@ -25,8 +34,6 @@ composer validate
         - js
         - images
         - web root
-        
-
 
 
 

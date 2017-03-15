@@ -1,0 +1,3 @@
+new_homepage:
+    path:     /helloWorld
+    defaults: { _controller: NewBundle:Default:helloWorld }

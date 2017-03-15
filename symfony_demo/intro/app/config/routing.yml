@@ -1,3 +1,7 @@
+new:
+    resource: "@NewBundle/Controller/"
+    type:     annotation
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation

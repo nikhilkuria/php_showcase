@@ -1,0 +1,43 @@
+bin/console cache:clear
+
+bin/console debug:container - list the modules present in the container
+bin/console debug:container <search term>- list the modules present in the container with serachi
+
+
+composer update
+composer validate
+
+/app - configuration info for the application
+     - kernel file AppKernel.php (main config file)
+        - used to register bundles
+     - security
+     - routing
+     - log files
+/src
+     - holds all the bundles
+     - controllers
+     - AppBundle.php
+/vendor
+     - house 3rd party dependencies for the app including the symfony framework
+/web
+     - publicly accessible files
+        - css
+        - js
+        - images
+        - web root
+
+
+
+bundle : grouping code for a specific purpose into a plugin like reusable package
+Three environment scopes : dev, prod and test
+
+the first thing to get loaded is the routing.yml from the app/config folder
+-- in the routing.yml in the app/config folder, the routing for each bundle can be specified
+    -- can be annotation or a routing.yml in the resource folder of a bundle
+
+twig
+ - extend the base.html.twig
+
+Questions
+
+- The resources within a bundle in src vs the resources in app
