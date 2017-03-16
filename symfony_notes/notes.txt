@@ -1,0 +1,67 @@
+bin/console cache:clear
+
+bin/console debug:container - list the modules present in the container
+bin/console debug:container <search term>- list the modules present in the container with serachi
+
+
+composer update
+composer validate
+
+/app - configuration info for the application
+     - kernel file AppKernel.php (main config file)
+        - used to register bundles
+     - security
+     - routing
+     - log files
+/src
+     - holds all the bundles
+     - controllers
+     - AppBundle.php
+/vendor
+     - house 3rd party dependencies for the app including the symfony framework
+/web
+     - publicly accessible files
+        - css
+        - js
+        - images
+        - web root
+
+service container:
+     special PHP object in Symfony that helps you instantiate, organize and retrieve the many objects of your application.
+     Service container, will allow you to standardize and centralize the way objects are constructed in your application.
+
+     Services can be configured in services.yml in app.config,
+     Ex :
+         services:
+               odd_even_checker:
+                   class: NewBundle\Services\OddEvenChecker
+               meta_info_printer:
+                   class: NewBundle\Services\MetaInfoPrinter
+                   arguments: ['@odd_even_checker']
+
+     This can then be retrieved from a controller.
+     Ex:         $metaInfoPrinter = $this->get('meta_info_printer');
+
+        This is another major advantage of using the service container.
+        Namely, a service is never constructed until it's needed.
+        If you define a service and never use it on a request, the service is never created.
+        This saves memory and increases the speed of your application.
+        This also means that there's very little or no performance hit for defining lots of services.
+        Services that are never used are never constructed.
+        Plus, once a service is created, it is reused for other requests.
+
+    Read more: http://symfony.com/doc/current/service_container.html
+
+bundle : grouping code for a specific purpose into a plugin like reusable package
+Three environment scopes : dev, prod and test
+
+the first thing to get loaded is the routing.yml from the app/config folder
+-- in the routing.yml in the app/config folder, the routing for each bundle can be specified
+    -- can be annotation or a routing.yml in the resource folder of a bundle
+
+twig
+ - extend the base.html.twig
+
+Questions
+
+- The resources within a bundle in src vs the resources in app

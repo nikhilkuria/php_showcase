@@ -1,0 +1,39 @@
+HttpKernelInterface
+    - has a method handle
+        - responsible for converting request to response
+
+Flow of the web/app.php
+
+##Create an AppKernel first
+
+AppKernel
+    - Class specific to the project
+    - Load Bundles
+    - 2 constructor params
+        - name of the environment
+            - the name passed is used to load the environment specific configuration
+
+                  public function registerContainerConfiguration(LoaderInterface $loader)
+                  {
+                      $loader->load($this->getRootDir().'/config/config_'.$this->getEnvironment().'.yml');
+                  }
+
+        - debug mode or not
+
+
+##Create a Request object
+
+Using the superglobals in PHP
+    - read more http://php.net/manual/en/language.variables.superglobals.php
+
+##Call the handle method of AppKernel
+    - the only param is the Request object
+    - the handle() method is implemented in the kernel class, which is the parent of the AppKernel
+    - ensure the kernel is booted. Booting includes
+        - initiliaze the registered Bundles
+            - bundles are returned as an array from the method registerBundles in AppKernel
+        - initialize the service containers
+
+##Get result of the handle operation
+    - the result of the handle operation is the Response object
+
