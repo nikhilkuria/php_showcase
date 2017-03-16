@@ -22,6 +22,8 @@ class DefaultController extends Controller
      */
     public function helloJsonAction($name, $age)
     {
-        return new JsonResponse(array('name'=>$name, 'age'=>$age));
+        $metaInfoPrinter = $this->get('meta_info_printer');
+        $metaString = $metaInfoPrinter->getMetaInfo($age);
+        return new JsonResponse(array('name'=>$name, 'age'=>$age, 'meta'=>$metaString));
     }
 }

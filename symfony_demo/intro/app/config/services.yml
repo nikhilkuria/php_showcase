@@ -4,6 +4,11 @@ parameters:
 #    parameter_name: value
 
 services:
+     odd_even_checker:
+         class: NewBundle\Services\OddEvenChecker
+     meta_info_printer:
+         class: NewBundle\Services\MetaInfoPrinter
+         arguments: ['@odd_even_checker']
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]

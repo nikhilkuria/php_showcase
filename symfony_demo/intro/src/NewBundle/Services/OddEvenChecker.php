@@ -8,8 +8,14 @@
 
 namespace NewBundle\Services;
 
+define("ODD", "odd");
+define("EVEN", "even");
 
 class OddEvenChecker
 {
+
+    public function check($num){
+        return $num % 2 == 0 ? EVEN : ODD;
+    }
 
 }
