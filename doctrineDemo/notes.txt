@@ -1,0 +1,9 @@
+vendor/bin/doctrine orm:schema-tool:create //used to create the schema objects
+
+vendor/bin/doctrine orm:schema-tool:drop --force
+vendor/bin/doctrine orm:schema-tool:create         //recreate the db
+
+vendor/bin/doctrine orm:schema-tool:update --force //update the schema
+
+
+vendor/bin/doctrine orm:schema-tool:update --force --dump-sql //to print the sql used as well
