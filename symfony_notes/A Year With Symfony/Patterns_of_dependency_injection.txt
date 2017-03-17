@@ -1,0 +1,90 @@
+##Booting a kernel (read the steps in journey_from_request_to_response)
+    - loading the bundles
+    - registering service container extensions
+        - service.xml
+        - configuration??
+        - compiler passes
+
+##Service Patterns
+    - A service is an object, registered at the service container under a certain id.
+    - A service definition is a bit of configuration to define such a service,
+        so that it can be instantiated at any time by the service container
+    - Handling Dependencies
+        - Required Dependencies
+            - Constructor Arguments
+                - as an argument parameter
+                Ex :
+                     services:
+                           odd_even_checker:
+                               class: NewBundle\Services\OddEvenChecker
+                           meta_info_printer:
+                               class: NewBundle\Services\MetaInfoPrinter
+                               arguments: ['@odd_even_checker']
+                -odd_even_checker is a arg for meta_info_printer
+                - in case more than one service use a same dependency, consider using inheritance
+                    - http://symfony.com/doc/current/service_container/parent_services.html
+            - Setter Injection
+                - Why use setter?
+                    - do not need a constructor
+                    - cannot change the current constructor
+                    - disadvantage - may forget to call the setter
+                    - can lead to temporal Coupling http://blog.ploeh.dk/2011/05/24/DesignSmellTemporalCoupling/
+                - wrap calls to setter set object and throw exception is they are missing
+
+        - Optional Dependencies
+            - Some dependencies are optional
+            - http://symfony.com/doc/current/service_container/optional_dependencies.html
+            - 'null' stragegy
+                - treat the dependency as null if it is not present
+                - yaml does not support this yet
+
+        - Injecting a collection of Services
+            - The service can use an array of services as a dependencies
+                - ex: an array of renderers
+            - The params are passed as an array
+                - http://symfony.com/doc/current/service_container/parameters.html#component-di-parameters-array
+                - Passing an array as a constructor argument is not type safe
+                    - to ensure type safely, include a (ex: addRenderer(RendererInterface $renderer) method
+                    - This will ensure the type safety is ensured.
+                    - The service definition should now be changed to call the addRenderer() method for each of the available renderers
+                - use custom service tag
+                    - Possible to fetch the entire subset of services which are tagged with a specific tag
+                        - consider the case where we like to have a list of 'mail transporters' used to send mails
+                        - the transporters are used by a mail sender to send mails
+                            - create the mail sender with a setter or addTransporter method
+                            - create the different transporter services in the container
+                            - tag the transporter services with a specific user defined tag
+                            - write a compiler pass to fetch all the services with the particular tag
+                            - fetch the transporters in the compiler pass and inject them to the mail sender service
+                            - read more : http://symfony.com/doc/current/service_container/tags.html
+                - possibility to get only the service ids rather than the references
+                    - lazy load the services as when required
+        - Delegated Creation
+            - Delegate the creation of services to a factory method
+                - Static factory method
+                    - Specify the factory class name and method name
+                    - ex:
+                        Services:
+                            app.newsletter_manager:
+                                class:   AppBundle\Email\NewsletterManager
+                                # call the static method
+                                factory: ['AppBundle\Email\NewsletterManagerStaticFactory', createNewsletterManager]
+                    - the method is called once and the result stored in memory
+                        to be reused
+                - Non static - called on an instance of the factory class
+                    - In this case the factory is a service as well
+                    - ex:
+                        services:
+                            app.newsletter_manager_factory:
+                                class: AppBundle\Email\NewsletterManagerFactory
+
+                            app.newsletter_manager:
+                                class:   AppBundle\Email\NewsletterManager
+                                # call a method on the specified factory service
+                                factory: 'app.newsletter_manager_factory:createNewsletterManager'
+            - Read more : http://symfony.com/doc/current/service_container/factories.html
+        - Manually Creating Services
+            - In cases where the services cannot be defined in a configuration file, it can be done manually
+            
+
+

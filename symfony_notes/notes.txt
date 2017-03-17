@@ -52,6 +52,31 @@ service container:
 
     Read more: http://symfony.com/doc/current/service_container.html
 
+    Also, consider using inheritance tree when using common dependencies,
+        - http://symfony.com/doc/current/service_container/parent_services.html
+
+service tags:
+    - Services can be tagged for a specific purpose
+    - Tags are a way to tell Symfony or other third-party bundles that your service
+        should be registered or used in some special way by the bundle
+    - Dependency Injection Tags
+        - ex: if you have a service that you would like to register
+            as a listener to one of Symfony's core events,
+            you can flag it with the kernel.event_listener tag
+        - read more here: http://symfony.com/doc/current/reference/dic_tags.html
+    - Custom tags
+        - You can create custom tags which can be used to tag a subset of services
+        - Possible to fetch the entire subset of services which are tagged with a specific tag
+            - consider the case where we like to have a list of 'mail transporters' used to send mails
+            - the transporters are used by a mail sender to send mails
+                - create the mail sender with a setter or addTransporter method
+                - create the different transporter services in the container
+                - tag the transporter services with a specific user defined tag
+                - write a compiler pass to fetch all the services with the particular tag
+                - fetch the transporters in the compiler pass and inject them to the mail sender service
+                - read more : http://symfony.com/doc/current/service_container/tags.html
+
+
 bundle : grouping code for a specific purpose into a plugin like reusable package
 Three environment scopes : dev, prod and test
 
