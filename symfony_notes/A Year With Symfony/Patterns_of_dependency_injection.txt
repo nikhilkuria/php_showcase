@@ -85,6 +85,25 @@
             - Read more : http://symfony.com/doc/current/service_container/factories.html
         - Manually Creating Services
             - In cases where the services cannot be defined in a configuration file, it can be done manually
-            
+
+#Configuration Class
+    - Configuration values are usually expected to show some kind of hierarchy
+    - Configuration class to define all possible configuration options for the bundle
+    - Should implement ConfigurationInterface
+    - There is one public method: getConfigTreeBuilder().
+        This method should return a TreeBuilder instance which is a
+            builder you use to describe all configuration options, including their validation rules
+    - http://symfony.com/doc/current/components/config/definition.html
+    - Usually, you will use an instance of the Configuration class inside a bundle’s extension class,
+        to process a given set of configuration arrays
+
+#Dynamically add tags
+    - Within the bundle extension
+    - fetch services from the container and add tags
+
+#Strategy pattern to load services!!TODO
+
+
+
 
 

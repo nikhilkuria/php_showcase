@@ -1,0 +1,31 @@
+##Common tags
+
+-The require tag
+    {
+        "require": {
+            "monolog/monolog": "1.0.*"
+        }
+    }
+
+-The autoload tag
+    {
+        "autoload": {
+            "psr-4": {"Acme\\": "src/"}
+        }
+    }
+
+-Metadata for the package
+    "name": "nikhilkuria/nikeandphp",
+    "description": "A PHP library used to work with Nike+ API",
+    "type": "library",
+    "authors": [
+        {
+            "name": "nikhilkuria",
+            "email": "nikhilkuria@gmail.com"
+        }
+    ]
+
+##Common commands
+
+php composer.phar install //Installs or downloads the dependencies
+php composer.phar update  //Updates the dependencies to the latest version

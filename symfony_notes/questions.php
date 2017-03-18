@@ -1,2 +1,4 @@
-- the dependency injection folder
+- the dependency injection folder or when to use that component
 - open the source of any class , ex the ctrl+shift+t in eclipse
+- when to use the configuration class
+- when to use the bundle extension
