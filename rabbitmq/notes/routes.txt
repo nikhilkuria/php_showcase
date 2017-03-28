@@ -1,0 +1,20 @@
+#Introduction
+    -With routes, we can specify which messages goes to which consumers
+    -Means, we can add a tag to a message we put in the queue
+        -A consumer can accept message with the tag he is interested in
+
+#How-to
+    -Work with the binding
+        -Use a binding key to bind a consumer to a message
+            -$channel->queue_bind($queue_name, $exchange_name, $binding_key);
+            -In this case, the consumer is only interested in the messages with the specific '$binding_key'
+    -Another type of exchange
+        -Enter the direct exchange
+            $channel->exchange_declare('direct_logs', 'direct', false, false, false);
+            $channel->basic_publish($msg, 'direct_logs', $severity);
+        -The third param is the binding_key of the message passed to the queue
+
+#Read more
+    -https://www.rabbitmq.com/tutorials/tutorial-four-php.html
+    -heroSorter.php
+    -heroClub.php

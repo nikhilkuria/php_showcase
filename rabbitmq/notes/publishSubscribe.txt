@@ -1,0 +1,30 @@
+#Introduction
+    -Possibility to have a broadcast channel
+    -Any number of consumers can connect to it
+
+#Enter exchange
+    -The producer never sends message to the queue
+    -The producer sends message to an exchange
+    -The exchange sends message to the queue
+        -Types of exchange to define what the exchange is supposed to do with the message.
+        -Fanout : broadcast the messages to all the queue it knows
+
+#How-to
+    -Define an exchange
+        -$channel->exchange_declare('logs', 'fanout', false, false, false);
+    -List exchanges
+        -rabbitmqctl list_exchanges
+    -Publish to the exchange instead of the queue
+        -$channel->basic_publish($msg, 'logs'); instead of
+        -$channel->basic_publish($msg, '', 'hello');
+    -Fetch by the consumer
+        -Temporary queues to bind to the exchange
+            -specify without a queue name
+                -list($queue_name, ,) = $channel->queue_declare("", false, false, true, false);
+            -bind queue to the exchange
+                -$channel->queue_bind($queue_name, 'logs');
+
+#Read More
+    -https://www.rabbitmq.com/tutorials/tutorial-three-php.html
+    -emit_log.php
+    -consume_log.php
