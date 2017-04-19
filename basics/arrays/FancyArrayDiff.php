@@ -8,13 +8,22 @@ $arrayZwei = [];
 
 $startTime = microtime(true);
 
-for ($index = 0; $index<2000000; $index++){
+/*for ($index = 0; $index<2000000; $index++){
     array_push($arrayEins, new Image($index, $index));
 }
 
 for ($index = 0; $index<2000005; $index++){
     array_push($arrayZwei, new Image($index, $index));
+}*/
+
+for ($index = 0; $index<2000000; $index++){
+    array_push($arrayEins, new Image(rand(0, $index), $index));
 }
+
+for ($index = 0; $index<2000005; $index++){
+    array_push($arrayZwei, new Image(rand(0, $index), $index));
+}
+
 
 $endTestDataPrepTime = microtime(true);
 
@@ -45,7 +54,7 @@ $endCompareTime = microtime(true);
 
 echo "\nCompare Complete ---- ".getSecs($startTime, $endCompareTime);
 
-var_dump($diffArray);
+//var_dump($diffArray);
 
 
 function getSecs($startTime, $endTime){
